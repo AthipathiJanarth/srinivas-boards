@@ -13,7 +13,8 @@ import { ProductComponent } from './Pages/product/product.component';
 import {appRoutes} from './routes';
 import { AboutComponent } from './Pages/about/about.component';
 import { ContactComponent } from './Pages/contact/contact.component';
-import { FAQComponent } from './Pages/faq/faq.component'
+import { FAQComponent } from './Pages/faq/faq.component';
+import { ProductCardComponent } from './Components/product-card/product-card.component'
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FAQComponent } from './Pages/faq/faq.component'
     AboutComponent,
     ContactComponent,
     FAQComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,
