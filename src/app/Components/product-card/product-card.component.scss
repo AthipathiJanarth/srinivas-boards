@@ -1,6 +1,16 @@
+.card-animated{
+    transition: transform .3s;
+    &:hover{
+        transform:translateY(-1.5rem) scale(1.03);
+    }
+
+}
+
 .card-sl {
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    
 }
 
 .card-image img {
@@ -27,6 +37,7 @@
     color: #fff;
     background: #E26D5C;
     -webkit-animation: pulse 1.5s infinite;
+    
 }
 
 .card-heading {
