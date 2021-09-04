@@ -232,5 +232,12 @@ $gutter-horizontal:6rem;
     &:hover &__photo:not(:hover){
         transform: scale(0.95);
     }
+    &__photo{
+        width:297px;
+        height: 198px;
+    }
     
+}
+.row{
+    padding: 20px;
 }
