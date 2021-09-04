@@ -94,14 +94,14 @@ $gutter-horizontal:6rem;
     -webkit-background-clip:text;
     color:transparent;
     letter-spacing: .2rem;
-    transition:all .2s;
+    //transition:all .2s;
 
-    &:hover{
-        transform:skewY(2deg) skewX(15deg) scale(1.1);
-        //text-shadow:[xdirection] [ydirection] [blurvalue] [colorofshadow]
-        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    // &:hover{
+    //     transform:skewY(2deg) skewX(15deg) scale(1.1);
+    //     //text-shadow:[xdirection] [ydirection] [blurvalue] [colorofshadow]
+    //     text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
         
-    }
+    // }
 }
 .btn{
     &,
