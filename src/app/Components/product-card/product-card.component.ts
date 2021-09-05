@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
@@ -8,8 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class ProductCardComponent implements OnInit {
 
   constructor() { }
+  @Input()  product:any;
+  products =new Array;
+  @Output() sendList = new EventEmitter();
 
   ngOnInit(): void {
+    console.log(this.product.length)
+  }
+
+  onPurchase(header :any,amount:any){
+    let headerval=header.innerText;
+    let amountval=amount.innerText;
+    let item = {headerval,amountval};
+    this.products.push(item);
+    this.sendList.emit(this.products);
   }
 
 }
