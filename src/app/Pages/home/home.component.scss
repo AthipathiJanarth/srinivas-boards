@@ -94,111 +94,16 @@ $gutter-horizontal:6rem;
     -webkit-background-clip:text;
     color:transparent;
     letter-spacing: .2rem;
-    transition:all .2s;
+    //transition:all .2s;
 
-    &:hover{
-        transform:skewY(2deg) skewX(15deg) scale(1.1);
-        //text-shadow:[xdirection] [ydirection] [blurvalue] [colorofshadow]
-        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    // &:hover{
+    //     transform:skewY(2deg) skewX(15deg) scale(1.1);
+    //     //text-shadow:[xdirection] [ydirection] [blurvalue] [colorofshadow]
+    //     text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
         
-    }
+    // }
 }
-.btn{
-    &,
-    &:link,
-    &:visited{
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 1.4rem 4rem;
-        display: inline-block;
-        border-radius: 10rem;
-        position: relative;
-        backface-visibility: hidden;
-        font-size: $default-font-size;
-        transition: all .2s;
-        border: none;
-        cursor: pointer;
-    }
-    &:hover{
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0,0,0,.2);
-        &::after{
-            transform: scaleX(1.3) scaleY(1.5);
-            opacity: 0;
-        }
-    
-    }
-    &:active{
-        transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(0,0,0,.2);
-    }
-    &::after{
-        content: "";
-        width: 100%;
-        height: 100%;
-        border-radius: 100px;
-        display: inline-block;
-        position: absolute;
-        top:0;
-        left:0;
-        transition: all .4s;
-        z-index:-1;
-        background-color:$color-white;
-    }
-   
-    
-    &-white{
-        background-color:$color-white;
-        color:$color-grey-dark;
-        &::after{
-            background-color: $color-white;
-        }
-        
-    }
 
-    &-green{
-        background-color:$color-primary;
-        color:$color-white;
-        &::after{
-            background-color: $color-primary;
-        }
-        
-    }
-    
-    &-animate{
-        animation-name: moveUp;
-        animation-duration: .5s;
-        animation-delay: 0.75s;
-        animation-timing-function: ease-out;
-        animation-fill-mode: backwards;
-    }
-   
-    
-}
-.btn-text{
-    &:link,
-    &:visited{
-        font-size: $default-font-size;
-        color: $color-primary-light;
-        display: inline-block;
-        border-bottom: 1px solid $color-primary;
-        margin-bottom: 3px;
-        text-decoration: none;
-
-    }
-    &:hover{
-        background-color: $color-primary;
-        color:$color-white;
-        //box-shadow: x y blue rgba(color,opacity)
-        box-shadow: 0 1rem 2rem rgba($color-black,.3);
-        transform: translateY(-2px);
-        transition: all .2s;
-    }
-    &:active{
-        box-shadow: 0 0.5rem 1rem rgba($color-black,.3);
-        transform: translateY(0px);
-    }
-}
 
 .composition{
     position: relative;
