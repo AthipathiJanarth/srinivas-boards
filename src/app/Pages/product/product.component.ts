@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.sass']
 })
 export class ProductComponent implements OnInit {
+  addeditems = new Array();
   products = [
     {
       header:'Audi Q1',
@@ -33,6 +34,10 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     this.mailBody = "Product%20paper"
     this.name = "Name";
+  }
+  addedlist(event:any){
+    this.addeditems.push(event);
+    console.log(event);
   }
 
 }

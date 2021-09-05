@@ -20,8 +20,8 @@ export class ProductCardComponent implements OnInit {
     let headerval=header.innerText;
     let amountval=amount.innerText;
     let item = {headerval,amountval};
-    this.products.push(item);
-    this.sendList.emit(this.products);
+    //this.products.push(item);
+    this.sendList.emit(item);
   }
 
 }
