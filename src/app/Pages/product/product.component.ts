@@ -17,13 +17,13 @@ export class ProductComponent implements OnInit {
     {
       header:'Audi Q2',
       description: 'Audi Q8 is a full-size luxury crossover SUV coupé made by Audi that was launched in 2018.',
-      amount: '$6700',
+      amount: '$6701',
       src:'https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     },
     {
       header:'Audi Q3',
       description: 'Audi Q8 is a full-size luxury crossover SUV coupé made by Audi that was launched in 2018.',
-      amount: '$6700',
+      amount: '$6702',
       src:'https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     }
   ]
@@ -39,5 +39,30 @@ export class ProductComponent implements OnInit {
     this.addeditems.push(event);
     console.log(event);
   }
+  onDelete(i:any){
+    this.addeditems.forEach((value,index)=>{
+      if(value==i) this.addeditems.splice(index,1);
+  });
+  }
+
+  check(i:any,val:any){
+    this.addeditems.forEach((value,index)=>{
+      if(value==event) console.log('gt')
+  });
+  }
+  //saveitems(header:any,amount:any,val:number){
+  //   this.addeditems.forEach((value,index)=>{
+  //     console.log(value);
+  //     if(value.headerval == header) value.quantity=val;
+  // });
+  //}
+  saveitems(){
+
+  }
+
+  finalOutput(){
+    console.log(this.addeditems);
+  }
+  
 
 }

@@ -19,7 +19,8 @@ export class ProductCardComponent implements OnInit {
   onPurchase(header :any,amount:any){
     let headerval=header.innerText;
     let amountval=amount.innerText;
-    let item = {headerval,amountval};
+    let quantity=1;
+    let item = {headerval,amountval,quantity};
     //this.products.push(item);
     this.sendList.emit(item);
   }

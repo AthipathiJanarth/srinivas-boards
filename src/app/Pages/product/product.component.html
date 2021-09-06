@@ -6,17 +6,59 @@
     </div>
   <div style="text-align: center;padding-top: 30px;">
     <form>
+        <!--  -->
+        <div class="card" *ngIf='addeditems.length>0'>
+            <div class="card-body">
+              <div id="table" class="table-editable">
+                <table class="table table-bordered table-responsive-md table-striped text-center">
+                  <thead>
+                    <tr>
+                      <th class="text-center">Product</th>
+                      <th class="text-center">Amount Per Piece</th>
+                      <th class="text-center">Quantity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor='let i of addeditems'>
+                      <td class="pt-3-half">{{i.headerval}}</td>
+                      <td class="pt-3-half">{{i.amountval}}</td>
+                      <!-- <td class="pt-3-half" contenteditable="true">{{i.amountval}}</td> -->
+                      <td class="pt-3-half">
+                          <input type="number" #val value='1' [(ngModel)]="i.quantity" name="quantity">
+                      </td>
+                      <!-- <td>
+                        <span class="table-remove">
+                          <button class="btn btn-success" title="Save" (click)=saveitems(i.headerval,i.amountval,+val.value) >Save</button>
+                          </span>
+                      </td> -->
+                      <td>
+                        <span class="table-remove">
+                          <button class="fa fa-trash delete-icon" style="color: red;border: none;" title="Delete" (click)=onDelete(i) ></button>
+                          </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+
+          <br/>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Name">
           </div>
     </form>
  <div class="btn btn-secondary btn-animate"> 
-    <a class="mail" href="mailto:padmasripaper@gmail.com?subject=Order%20From%20{{name}}&body={{mailBody}}">Confirm order</a>
- </div></div>
- <div>
+    <a class="mail" href="mailto:padmasripaper@gmail.com?subject=Order%20From%20{{name}}&body={{mailBody}}" (click)="finalOutput()">Confirm order</a>
+ </div>
+ <!-- <div>
      <p>Added items</p>
      <ul>
          <li *ngFor= " let items of addeditems">{{items.headerval}}</li>
      </ul>
- </div>
+ </div> -->
+
+
+  
 </div>
