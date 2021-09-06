@@ -5,9 +5,9 @@
         </div>
     </div>
   <div style="text-align: center;padding-top: 30px;">
-    <form>
+    <form *ngIf='addeditems.length>0'>
         <!--  -->
-        <div class="card" *ngIf='addeditems.length>0'>
+        <div class="card" >
             <div class="card-body">
               <div id="table" class="table-editable">
                 <table class="table table-bordered table-responsive-md table-striped text-center">
@@ -46,12 +46,17 @@
 
           <br/>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Name">
+            <input type="text" class="form-control" placeholder="Name"  [(ngModel)]="name" style="
+            width: 25%;
+            margin: auto;
+            font-size: 16px;
+        ">
           </div>
+          <div class="btn btn-secondary btn-animate" (click)="finalOutput()"> 
+            <a class="mail" href="mailto:padmasripaper@gmail.com?subject=Order%20From%20{{name}}&body={{mailBody}}" >Confirm order</a>
+         </div>
     </form>
- <div class="btn btn-secondary btn-animate"> 
-    <a class="mail" href="mailto:padmasripaper@gmail.com?subject=Order%20From%20{{name}}&body={{mailBody}}" (click)="finalOutput()">Confirm order</a>
- </div>
+ 
  <!-- <div>
      <p>Added items</p>
      <ul>

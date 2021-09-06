@@ -32,8 +32,9 @@ export class ProductComponent implements OnInit {
   name: any;
 
   ngOnInit(): void {
-    this.mailBody = "Product%20paper"
-    this.name = "Name";
+    this.mailBody = ""
+    this.name = "";
+    
   }
   addedlist(event:any){
     this.addeditems.push(event);
@@ -60,7 +61,10 @@ export class ProductComponent implements OnInit {
 
   }
 
-  finalOutput(){
+  finalOutput() {
+    this.addeditems.forEach(element => {
+     this.mailBody=this.mailBody+element.headerval+"   "+element.quantity+"%0d%0a"
+    });
     console.log(this.addeditems);
   }
   
