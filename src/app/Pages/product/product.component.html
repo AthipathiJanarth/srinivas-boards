@@ -24,7 +24,7 @@
                       <td class="pt-3-half">{{i.amountval}}</td>
                       <!-- <td class="pt-3-half" contenteditable="true">{{i.amountval}}</td> -->
                       <td class="pt-3-half">
-                          <input type="number" #val value='1' [(ngModel)]="i.quantity" name="quantity">
+                          <input type="number" #val value='1' [(ngModel)]="i.quantity" name="quantity" required>
                       </td>
                       <!-- <td>
                         <span class="table-remove">
@@ -46,14 +46,14 @@
 
           <br/>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Name"  [(ngModel)]="name" style="
+            <input type="text" class="form-control" placeholder="Name" required [(ngModel)]="name" name="username" style="
             width: 25%;
             margin: auto;
             font-size: 16px;
         ">
           </div>
-          <div class="btn btn-secondary btn-animate" (click)="finalOutput()"> 
-            <a class="mail" href="mailto:padmasripaper@gmail.com?subject=Order%20From%20{{name}}&body={{mailBody}}" >Confirm order</a>
+          <div > 
+            <a class="mail" href="mailto:padmasripaper@gmail.com?subject=Order%20From%20{{name}}&body={{mailBody}}" class="btn btn-secondary btn-animate" (click)="finalOutput()" >Confirm order</a>
          </div>
     </form>
  

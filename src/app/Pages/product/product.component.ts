@@ -12,19 +12,19 @@ export class ProductComponent implements OnInit {
       header:'Audi Q1',
       description: 'Audi Q8 is a full-size luxury crossover SUV coupé made by Audi that was launched in 2018.',
       amount: '$6700',
-      src:'https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+      src:'../../../../assets/images/1.jpg'
     },
     {
       header:'Audi Q2',
       description: 'Audi Q8 is a full-size luxury crossover SUV coupé made by Audi that was launched in 2018.',
       amount: '$6701',
-      src:'https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+      src:'../../../../assets/images/2.jpg'
     },
     {
       header:'Audi Q3',
       description: 'Audi Q8 is a full-size luxury crossover SUV coupé made by Audi that was launched in 2018.',
       amount: '$6702',
-      src:'https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+      src:'../../../../assets/images/3.jpg'
     }
   ]
   constructor() { }
@@ -33,7 +33,6 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.mailBody = ""
-    this.name = "";
     
   }
   addedlist(event:any){
